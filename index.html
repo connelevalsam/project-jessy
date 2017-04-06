@@ -5,8 +5,70 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/tachyons.css">
 	<style type="text/css">
-		@media (min-width: 480px){
+/* ----------- Mobiles ---------- */
+		@media (max-width: 479px){
 			.spanOne{
+				top: 8%;
+				left: 46%;
+			}
+			.spanTwo{
+				top: 8%;
+				left: 46%;
+			}
+			.spanNums{
+				top: 8%;
+				left: 46%;
+			}
+			.searchon{
+				top: 23px;
+				left: 60px;
+			}
+			.search{
+				top: 12px;
+				right: 20px;
+			}
+			.fontSize{
+				font-size: .775rem;
+				font-family: segoe ui;
+			}
+		}
+/* --------- Tablets ---------*/
+		@media screen
+			and (min-device-width: 480px)
+			and (max-device-width: 960px)
+			and (-webkit-min-device-pixel-ratio: 1){
+				.spanNums{
+					top: 8%;
+					left: 46%;
+				}
+			}
+		@media screen
+			and (min-device-width: 960px)
+			and (max-device-width: 1200px)
+			and (-webkit-min-device-pixel-ratio: 1){
+				.searchon{
+					top: 23px;
+					left: 39px;
+				}
+				.spanNums{
+					top: -8%;
+					left: 46%;
+				}
+			}
+		@media screen
+			and (min-device-width: 768px)
+			and (max-device-width: 960px)
+			and (-webkit-min-device-pixel-ratio: 1){
+				.searchon{
+					top: 23px;
+					left: 140px;
+				}
+			}
+		
+		@media (max-width: 980px){
+			.search{
+				top: 16px;
+				right: 20px;
 				top: -15px;
 				left: 145px
 			}
@@ -23,12 +85,38 @@
 				left: 145px
 			}
 		}
-		@media (max-width: 480px){
-			.spanTwo{
-				top: 15px;
-				left: 140px
+		
+/* --------------- Laptops ------------------ */
+/* ----------- Non-Retina Screens ----------- */
+		@media screen 
+			and (min-device-width: 1200px) 
+			and (max-device-width: 1600px) 
+			and (-webkit-min-device-pixel-ratio: 1) { 
+				.spanNums{
+					top: -8%;
+					left: 46%;
+				}
+				.searchon{
+					top: 23px;
+					left: 70px;
+				}
 			}
+ 
+/* ----------- Retina Screens ----------- */
+		@media screen 
+			and (min-device-width: 1200px) 
+			and (max-device-width: 1600px) 
+			and (-webkit-min-device-pixel-ratio: 2)
+			and (min-resolution: 192dpi) { 
+				.spanNums{
+					top: -8%;
+					left: 46%;
+				}
 		}
+		@media (min-width: 980px){
+			.search{
+				top: 20px;
+				right: 50px;
 		@media (min-width: 860px){
 			.spanNums{
 				top: -15px;
@@ -41,12 +129,32 @@
 				left: 145px
 			}
 		}
-		@media (max-width: 480px){
-			.spanNums{
-				top: 15px;
-				left: 140px
+		@media (min-width: 479px){
+			.spanOne{
+				top: -8%;
+				left: 46%;
 			}
+			.spanTwo{
+				top: -8%;
+				left: 46%;
+			}
+			
 		}
+		@media screen
+			and (min-device-width: 1200px)
+			and (-webkit-min-device-pixel-ratio: 2)
+			and (min-resolution: 192dpi) {
+				.searchon{
+					top: 23px;
+					left: 50px;
+				}
+				.spanNums{
+					top: -8%;
+					left: 46%;
+				}
+			}
+
+
 		@media (max-width: 480px){
 			.searchon{
 				top: 23px;
@@ -79,6 +187,18 @@
 		<div style="background: url( http://placehold.it/400x400);" class="cover tc pa2 vh-100 cf">
 			<div class="w-100 mb4">
 				<nav class="dtc v-mid w-third fl tr mt0-ns">
+					<a class="f6 fw3 fw6-ns hover-green link pointer fontSize navy mr2 mr3-m mr4-l dib ttu">about us</a>
+					<a class="f6 fw6-ns hover-green link pointer navy fontSize mr2 mr3-m mr4-l dib ttu">help</a>
+				</nav><!--left nav --><div class="w-third tc fl">
+					<img src="http://placehold.it/100x50">
+				</div><!--logo --><nav class="dtc v-mid w-third tl mt0-ns fl">
+					<a class="f6 fw6-ns hover-green link pointer navy mr2 fontSize mr3-m mr4-l dib ttu">sign up</a>
+					<a class="f6 fw6-ns hover-green link pointer navy mr2 fontSize mr3-m mr4-l dib ttu">sign in</a>
+				</nav><!--right nav -->
+			</div>
+			<div class="v-mid vh-50 mt6-l pv4 tc">
+				<div class="v-base-l">
+					<p class="f3 f1-l fw6 green">
 					<a class="f6 fw6 hover-green link pointer navy mr2 mr3-m mr4-l dib ttu">about us</a>
 					<a class="f6 fw6 hover-green link pointer navy mr2 mr3-m mr4-l dib ttu">help</a>
 				</nav><!--left nav --><div class="w-third tc fl">
@@ -95,6 +215,8 @@
 					</p>
 					<div class="bg-transparent">
 						<div class="w-100">
+
+							<div class="relative w-100 w-50-ns mt3-ns pv2 bg-white br-pill dib">
 							<div class="relative w-100 w-50-ns mt3-ns pv1 pv3-ns bg-white br-pill dib">
 								<input class="bg-transparent w-60 w-two-thirds-ns bn br2 pa2 tc navy" placeholder="search">
 								<div class="absolute bg-white tc search">
@@ -230,6 +352,11 @@
 				</div>
 			</div><!-- how it works explanation -->
 			<div class="w-100 tc bg-transparent pv3">
+				<div class="w-70 w-50-l dib tc">
+					<span class="f6 f5-m f4-l">Within city, Delivery takes</span>
+					<h1 class="f6 f4-m f2-l ph2 pv2 ba b--black-10 dib">1:00 Hr</h1><br>
+					<span class="f6 f5-m f4-l">Outside city, Delivery takes</span>
+					<h1 class="f6 f4-m f2-l ph2 pv2 ba b--black-10 dib">1Hr 30Min</h1><br>
 				<div class="w-70 w-50-l dib tl">
 					<span>Within city, Delivery takes</span>
 					<h1 class="ph2 pv2 ba b--black-10 dib">1:00 Hr</h1><br>
@@ -249,6 +376,10 @@
 	<footer class="bg-white w-100">
 		<section class="w-100 bg-transparent">
 			<div class="w-100 cf lh-copy bb b--black-20 ph2 ph4-ns">
+				<div class="w-100 w-third-l fl tc">
+					<h3 class="mb0">Secure payments with</h3>
+					<img src="images/cards.png">
+				</div><!-- 1 --><div class="w-100 w-third-l fl">
 				<div class="w-100 w-third-ns fl tc">
 					<h3 class="mb0">Secure payments with</h3>
 					<img src="images/cards.png">
@@ -259,6 +390,9 @@
 						<a class="f6 fw6 hover-green link pointer black-60 mr1 mr2-l dib">Terms</a>
 						<a class="f6 fw6 hover-green link pointer black-60 mr1 mr2-l dib">Privacy</a>
 					</nav>
+				</div><!-- 2 --><div class="w-100 w-third-l fl tc tl-ns pb2">
+					<div class="relative w-100 mt3-ns pt3 tc">
+						<div class="absolute bg-white pl3 pl0-ns w-10 w-20-l tc searchon">
 				</div><!-- 2 --><div class="w-100 w-third-ns fl tc tl-ns pb2">
 					<div class="relative w-100 mt3-ns pt3">
 						<div class="absolute bg-white pl3 pl0-ns w-10 w-20-ns tc searchon">
@@ -269,12 +403,14 @@
 								s-17-7.626-17-17S14.61,6,23.984,6z" fill="#000" />
 							</svg><!-- search logo -->
 						</div>
+						<input class="bg-transparent w-60 w-two-thirds-l ba b--black-20 br2 pa2 tc black-60" placeholder="search">
 						<input class="bg-transparent w-60 w-two-thirds-ns ba b--black-20 br2 pa2 tr-m tc black-60" placeholder="search">
 					</div>
 				</div><!-- 3 -->
 			</div><!-- top footer container -->
 			<div class="w-100 tc ph2 ph4-ns">
 				<div class="w-100 tc mt3 pv3">
+					<a class="link dim black-30 dib br-100 h1 w1 mr1 " href="#" title="">
 					<a class="link dim black-30 dib br-100 h1 w1 mr5 " href="#" title="">
 						    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 402.041 402.04" style="enable-background:new 0 0 402.041 402.04; fill:green"
 								 xml:space="preserve">
@@ -297,12 +433,14 @@
 										<title>rss</title>
 							</svg>
 						</a>
+						<a class="link dim black-30 dib h1 w1 br-100 mr1 " href="#" title="">
 						<a class="link dim black-30 dib h1 w1 br-100 mr5 " href="#" title="">
 						    <svg data-icon="facebook" viewBox="0 0 32 32" style="fill:green">
 						      <title>facebook icon</title>
 						      <path d="M8 12 L13 12 L13 8 C13 2 17 1 24 2 L24 7 C20 7 19 7 19 10 L19 12 L24 12 L23 18 L19 18 L19 30 L13 30 L13 18 L8 18 z"></path>
 						    </svg>
 						</a>
+						<a class="link dim black-30 dib h1 w1 br-100 mr1 " href="#" title="">
 						<a class="link dim black-30 dib h1 w1 br-100 mr5 " href="#" title="">
 						    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 352 352" style="enable-background:new 0 0 352 352; fill:green" xml:space="preserve">
@@ -313,6 +451,7 @@
 								<title>tumblr</title>
 							</svg>
 						</a>
+						<a class="link dim black-30 dib br-100 h1 w1 mr1 " href="#" title="">
 						<a class="link dim black-30 dib br-100 h1 w1 mr5 " href="#" title="">
 						    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 								 viewBox="0 0 461.001 461.001" style="enable-background:new 0 0 461.001 461.001; fill:green" xml:space="preserve" >
